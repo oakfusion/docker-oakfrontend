@@ -7,6 +7,8 @@ RUN apt-get -y install vim
 RUN apt-get install -y g++ curl libssl-dev apache2-utils
 RUN apt-get -y install make
 RUN apt-get -y install wget
+RUN apt-get -y install git
+RUN apt-get -y install bzip2
 
 WORKDIR /home
 RUN wget http://nodejs.org/dist/v0.10.30/node-v0.10.30.tar.gz
@@ -24,4 +26,4 @@ EXPOSE 8080
 EXPOSE 9000
 
 WORKDIR /home/app
-CMD ["grunt", "serve"]
+CMD npm install && bower --config.interactive=false --allow-root install && grunt serve
