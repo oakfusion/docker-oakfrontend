@@ -26,4 +26,4 @@ EXPOSE 8080
 EXPOSE 9000
 
 WORKDIR /home/app
-CMD npm install && bower --config.interactive=false --allow-root install && grunt serve
+CMD npm install && bower --config.interactive=false --allow-root install && grunt serve --force
