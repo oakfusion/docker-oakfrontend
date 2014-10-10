@@ -17,7 +17,9 @@ WORKDIR node-v0.10.30
 RUN ./configure
 RUN make
 RUN make install
-RUN npm install -g yo
+RUN npm install -g bower
+RUN npm install -g grunt-cli
+RUN npm install -g grunt
 
 WORKDIR /
 RUN mkdir /home/app
