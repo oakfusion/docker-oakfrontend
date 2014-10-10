@@ -22,8 +22,7 @@ RUN npm install -g yo
 WORKDIR /
 RUN mkdir /home/app
 
-EXPOSE 8080
-EXPOSE 9000
-
 WORKDIR /home/app
 CMD npm install && bower --config.interactive=false --allow-root install && grunt serve --force
+
+EXPOSE 9000
